@@ -6,15 +6,25 @@
 Welcome to MuTCM's documentation!
 =================================
 
+MuTCM created to support the devops/testing engineers to create more test cases with readable files
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
 
 
-Indices and tables
+Usage
 ==================
 
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. code-block:: python
+
+   import MuTCM
+
+   tcm = MuTCM('cases')
+   print(tcm.case_runs)
+
+   @pytest.mark.parametrize("data", tcm.case_runs)
+   def test_api(data):
+      print(data)
+      assert tcm.api_test(data) == data['expected']

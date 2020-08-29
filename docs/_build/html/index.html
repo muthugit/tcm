@@ -83,7 +83,7 @@
               <!-- Local TOC -->
               <div class="local-toc"><ul>
 <li><a class="reference internal" href="#">Welcome to MuTCM’s documentation!</a></li>
-<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+<li><a class="reference internal" href="#usage">Usage</a></li>
 </ul>
 </div>
             
@@ -151,16 +151,23 @@
             
   <div class="section" id="welcome-to-mutcm-s-documentation">
 <h1>Welcome to MuTCM’s documentation!<a class="headerlink" href="#welcome-to-mutcm-s-documentation" title="Permalink to this headline">¶</a></h1>
+<p>MuTCM created to support the devops/testing engineers to create more test cases with readable files</p>
 <div class="toctree-wrapper compound">
 </div>
 </div>
-<div class="section" id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this headline">¶</a></h1>
-<ul class="simple">
-<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
-<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
-<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
-</ul>
+<div class="section" id="usage">
+<h1>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">MuTCM</span>
+
+<span class="n">tcm</span> <span class="o">=</span> <span class="n">MuTCM</span><span class="p">(</span><span class="s1">&#39;cases&#39;</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">tcm</span><span class="o">.</span><span class="n">case_runs</span><span class="p">)</span>
+
+<span class="nd">@pytest.mark.parametrize</span><span class="p">(</span><span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="n">tcm</span><span class="o">.</span><span class="n">case_runs</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">test_api</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+   <span class="k">print</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+   <span class="k">assert</span> <span class="n">tcm</span><span class="o">.</span><span class="n">api_test</span><span class="p">(</span><span class="n">data</span><span class="p">)</span> <span class="o">==</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;expected&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
 </div>
 
 
