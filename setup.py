@@ -1,7 +1,7 @@
 import setuptools
 from setuptools import find_packages
 
-build_version = "0.0.2"
+build_version = "0.0.4"
 
 if __name__ == "__main__":
     with open("README.md", "r") as fh:
@@ -19,6 +19,10 @@ if __name__ == "__main__":
         # packages=setuptools.find_packages(),
         packages=['mutcm'],
         package_dir = {'mutcm': 'src'},
+        project_urls={
+            "Documentation": "https://mutcm.readthedocs.io/en/latest/",
+            "Author": "https://muthupandian.in"
+        },
         classifiers=[
             "Programming Language :: Python :: 3",
             "License :: OSI Approved :: MIT License",
