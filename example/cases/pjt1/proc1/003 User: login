@@ -23,7 +23,7 @@ This is the long description
         {
             "scenario": "Invalid header",
             "text1": 10,
-            "expected":500
+            "expected":200
         },
      "2":
         {
