@@ -1,4 +1,7 @@
 [![Documentation Status](https://readthedocs.org/projects/mutcm/badge/?version=latest)](https://mutcm.readthedocs.io/en/latest/?badge=latest)
+![build](https://github.com/muthugit/tcm/workflows/ci/badge.svg)
+
+
 
 # tcm
 Yet another file based Test Case Management tool.
