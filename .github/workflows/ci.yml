@@ -24,3 +24,5 @@ jobs:
         python -m pip install --upgrade pip
         pip install pytest
         python pytest
+    - name: Test with pytest
+      run: pytest --cov=./ --cov-report=xml
