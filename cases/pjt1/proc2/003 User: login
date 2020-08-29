@@ -1,0 +1,45 @@
+!!! Muthupandian
+~ v0.1
+# api
+
+--
+## Description
+This is the long description
+
+--
+## Steps
+```steps
+    {
+        "url": "https://whirldatascience.com/",
+        "method": "get",
+        "body": <scenario_text1>
+    }
+```
+--
+
+## Scenarios
+```scenarios
+{
+    "1":
+        {
+            "scenario": "Invalid header",
+            "text1": {
+                "user":"a"
+            },
+            "text2":  "this is text 2",
+            "expected":200
+        },
+     "2":
+        {
+            "scenario": "Invalid header",
+            "text1": {
+                "user":"a",
+                "pass":"X"
+            },
+            "text2":  "this is text 2",
+            "expected":200
+        }
+}
+```
+
+--
