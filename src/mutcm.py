@@ -1,6 +1,6 @@
 import os, json, requests
 
-class MuTCM:
+class TCMParser:
     def __init__(self, case_dir):
         self.components = {}
         self.cases = []

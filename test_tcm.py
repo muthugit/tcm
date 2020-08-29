@@ -6,9 +6,9 @@ import pytest
 # pytest.main(["test_tcm.py::test_api","--html", "report.html"])
 
 
-from src import MuTCM
+from src import TCMParser
 
-tcm = MuTCM('cases')
+tcm = TCMParser('cases')
 print(tcm.case_runs)
 
 @pytest.mark.parametrize("data", tcm.case_runs)

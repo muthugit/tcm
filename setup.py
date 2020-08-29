@@ -1,34 +1,28 @@
-import pathlib
-from setuptools import setup
+import setuptools
+from setuptools import find_packages
 
-# The directory containing this file
-HERE = pathlib.Path(__file__).parent
+build_version = "0.0.2"
 
-# The text of the README file
-README = (HERE / "README.md").read_text()
+if __name__ == "__main__":
+    with open("README.md", "r") as fh:
+        long_description = fh.read()
 
-# This call to setup() does all the work
-setup(
-    name="realpython-reader",
-    version="1.0.0",
-    description="Read the latest Real Python tutorials",
-    long_description=README,
-    long_description_content_type="text/markdown",
-    url="https://github.com/realpython/reader",
-    author="Real Python",
-    author_email="office@realpython.com",
-    license="MIT",
-    classifiers=[
-        "License :: OSI Approved :: MIT License",
-        "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.7",
-    ],
-    packages=["reader"],
-    include_package_data=True,
-    install_requires=["feedparser", "html2text"],
-    entry_points={
-        "console_scripts": [
-            "realpython=reader.__main__:main",
-        ]
-    },
-)
+    setuptools.setup(
+        name="mutcm", # Replace with your own username
+        version=build_version,
+        author="Muthupandian",
+        author_email="contact@muthupandian.in",
+        description="Support for devops",
+        long_description=long_description,
+        long_description_content_type="text/markdown",
+        url="https://github.com/muthugit/tcm",
+        # packages=setuptools.find_packages(),
+        packages=['mutcm'],
+        package_dir = {'mutcm': 'src'},
+        classifiers=[
+            "Programming Language :: Python :: 3",
+            "License :: OSI Approved :: MIT License",
+            "Operating System :: OS Independent",
+        ],
+        python_requires='>=3.6',
+    )

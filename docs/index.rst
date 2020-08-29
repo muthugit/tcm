@@ -19,10 +19,11 @@ Usage
 
 .. code-block:: python
 
-   import MuTCM
+   from mutcm import TCMParser
 
-   tcm = MuTCM('cases')
+   tcm = TCMParser('cases')
    print(tcm.case_runs)
+   # this should returns the JSON object with all runs
 
    @pytest.mark.parametrize("data", tcm.case_runs)
    def test_api(data):
