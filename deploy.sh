@@ -1,3 +1,4 @@
+python setup.py install
 python -m twine upload --repository pypi dist/*
 cd docs/
 make html
