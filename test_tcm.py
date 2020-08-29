@@ -8,7 +8,7 @@ import pytest
 
 from src import TCMParser
 
-tcm = TCMParser('cases')
+tcm = TCMParser('example/cases')
 print(tcm.case_runs)
 
 @pytest.mark.parametrize("data", tcm.case_runs)
