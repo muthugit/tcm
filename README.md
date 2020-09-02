@@ -2,6 +2,8 @@
 ![build](https://github.com/muthugit/tcm/workflows/ci/badge.svg)
 
 
+### Todo
+1. Handling POST method
 
 # tcm
 Yet another file based Test Case Management tool.
